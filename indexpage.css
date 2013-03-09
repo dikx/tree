@@ -1,0 +1,55 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+    width: auto;
+}
+.carousel-caption h1, .carousel-caption .lead {
+    color: #FFFFFF;
+    line-height: 1.25;
+    margin: 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+.carousel-caption h1, .carousel-caption .lead {
+    color: #FFFFFF;
+    line-height: 1.25;
+    margin: 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+.carousel {
+    margin-bottom: 60px;
+}
+.carousel .container {
+    position: relative;
+    z-index: 9;
+}
+.carousel-control {
+    background-color: transparent;
+    border: 0 none;
+    font-size: 120px;
+    height: 80px;
+    margin-top: 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+.carousel .item {
+    height: 500px;
+}
+.carousel img {
+    height: 500px;
+    left: 0;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+}
+.carousel-caption {
+    background-color: transparent;
+    margin-top: 200px;
+    max-width: 550px;
+    padding: 0 20px;
+    position: static;
+}
+.carousel-caption .btn {
+    margin-top: 10px;
+}

@@ -12,7 +12,9 @@ Treebook::Application.routes.draw do
 
   resources :statuses
   get 'feed', to: 'statuses#index', as: :feed
-  root :to => "statuses#index"
+  get 'game', to: 'game#list', as: :game
+   get 'topboard', to: 'topboard#index', as: :topboard
+  root :to => "index#index"
 
 
 

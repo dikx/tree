@@ -20,7 +20,7 @@ validates :profile_name, presence: true,
 						}
 
 has_many :statuses
-
+has_many :user_friendships
   def full_name
 first_name + " " + last_name
   end
