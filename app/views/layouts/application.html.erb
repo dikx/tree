@@ -15,7 +15,7 @@
 
 <ul class="nav">
 <a class="brand" href="/"><img src="http://www.moneytz.com/media/images/logo2.png" /></a>
-	<li class="divider-vertical"></li>
+	<li class="divider-vertical" style="margin-top: 20px"></li>
 	<li><%= link_to "Gameboard", game_path %></li>
 <li><%= link_to "Leaderboard", topboard_path %></li>
 <li><%= link_to "News", feed_path %></li>
@@ -60,7 +60,8 @@
 </div>
 </div>
 
- <%= yield :index_page %>
+<%= yield :index_page %>
+<%= yield :topboard_header %>
 <div class="container">
 	<% flash.each do |type, message| %>
 <div class="alert <%= flash_class type %>">

@@ -19,6 +19,9 @@ body {
 }
 .navbar .nav .brand{
 	margin-left: 10px;
+	padding-top: 15px;
+	padding-bottom: 2px;
+	margin-bottom: 2px;
 }
 .navbar .nav .last {
 	margin-right: 15px;

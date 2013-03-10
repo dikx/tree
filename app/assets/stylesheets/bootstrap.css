@@ -4840,6 +4840,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .divider-vertical {
   border-right-color: #222222;
   border-left-color: #111111;
+  margin-top: 20px;
 }
 
 .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
