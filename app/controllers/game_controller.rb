@@ -6,7 +6,7 @@ class GameController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @statuses }
 @user = User.find_by_profile_name(params[:id])
-	User.vip_status
+
     		end
   		end
 end

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MoneyTZ</title>
+  <title>BETMYBITS</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -14,9 +14,9 @@
 
 
 <ul class="nav">
-<a class="brand" href="/"><img src="http://www.moneytz.com/media/images/logo2.png" /></a>
-	<li class="divider-vertical" style="margin-top: 20px"></li>
-	<li><%= link_to "Gameboard", game_path %></li>
+<a class="brand" href="/">BETMYBITS</a>
+	<li class="divider-vertical" style=""></li>
+	<li><%= link_to "Trading", game_path %></li>
 <li><%= link_to "Leaderboard", topboard_path %></li>
 <li><%= link_to "News", feed_path %></li>
 </ul>
@@ -40,7 +40,7 @@
 <%= link_to 'Messages <span class="badge badge-important">6</span>'.html_safe, edit_user_registration_path %> 
 </li>
 <li>
-<%= link_to "Profile", current_user.profile_name %>
+<a href="/profile/<%=current_user.profile_name%>">Profile</a>
 
 </li>
 <li>
@@ -53,8 +53,8 @@
 </li>
 
 <% else %>
-<li><%= link_to "Register", register_path %></li>
-<li><%= link_to "Login", login_path %></li>
+<a class="btn btn-primary" href="/users/sign_in">Login</a>
+<a class="btn" href="/users/sign_up">Create Account</a>
 <% end %>
 	</ul>
 </div>
@@ -62,7 +62,7 @@
 
 <%= yield :index_page %>
 <%= yield :topboard_header %>
-<div class="container">
+<div id="page" class="container">
 	<% flash.each do |type, message| %>
 <div class="alert <%= flash_class type %>">
 <button class="close" data-dismiss="alert">x</button>

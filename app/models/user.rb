@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :first_name, :last_name, :profile_name, :vip_status, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :first_name, :last_name, :profile_name, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
 
@@ -28,13 +28,6 @@ has_many :user_friendships
 first_name + " " + last_name
   end
 
-def is_vip
-if vip_status==1
-      return true
-    else
-      return false
-    end
-end
 
   def gravatar_url
 stripped_email = email.strip

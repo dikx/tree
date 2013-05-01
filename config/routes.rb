@@ -1,7 +1,13 @@
 Treebook::Application.routes.draw do
+   root :to => "index#index"
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+
   get "profiles/show"
 
   devise_for :users
+  ActiveAdmin.routes(self)
 
   devise_scope :user do
     get 'register', to: 'devise/registrations#new', as: :register
@@ -13,12 +19,11 @@ Treebook::Application.routes.draw do
   resources :statuses
   get 'feed', to: 'statuses#index', as: :feed
   get 'game', to: 'game#list', as: :game
-   get 'topboard', to: 'topboard#index', as: :topboard
-  root :to => "index#index"
+  get 'topboard', to: 'topboard#index', as: :topboard
+  get '/profile/:id', to: 'profiles#show'
 
 
 
-  get '/:id', to: 'profiles#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
